@@ -15,7 +15,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/ic_app_logo" />
 
     <LinearLayout
@@ -29,11 +29,12 @@
             android:id="@+id/logintext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Sign Up"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
 
 
     </LinearLayout>
@@ -41,8 +42,8 @@
     <RelativeLayout
         android:id="@+id/layout_22"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="260dp">
+        android:layout_height="500dp"
+        android:layout_marginTop="230dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -53,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="0dp"
                 android:layout_weight="1"
@@ -80,10 +81,36 @@
                         android:id="@+id/username"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:drawableLeft="@drawable/baseline_person_24"
                         android:drawablePadding="8dp"
-                        android:hint="Username"
+                        android:hint="Name"
+                        android:padding="8dp"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:background="@drawable/edittext_shap"/>
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/baseline_email_24"
+                        android:drawablePadding="8dp"
+                        android:hint="Email"
+                        android:padding="8dp"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:background="@drawable/edittext_shap"/>
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/baseline_phone_24"
+                        android:drawablePadding="8dp"
+                        android:hint="Phone no"
                         android:padding="8dp"
                         android:textColor="@color/white"
                         android:textColorHighlight="@color/cardview_dark_background"
@@ -93,10 +120,24 @@
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="10dp"
                         android:drawableLeft="@drawable/baseline_lock_24"
                         android:drawablePadding="8dp"
                         android:hint="Password"
+                        android:inputType="textPassword"
+                        android:padding="8dp"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:background="@drawable/edittext_shap"/>
+
+                    <EditText
+                        android:id="@+id/confirmpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/baseline_lock_24"
+                        android:drawablePadding="8dp"
+                        android:hint="Confirm Password"
                         android:inputType="textPassword"
                         android:padding="8dp"
                         android:textColor="@color/white"
@@ -116,10 +157,10 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:layout_marginBottom="55dp"
+            android:layout_marginBottom="60dp"
             android:textColorHint="@color/white"
             android:padding="8dp"
-            android:text="Login"
+            android:text="Sign Up"
             android:textAlignment="center"
             android:textColor="@color/app_white"
             android:textSize="15dp"
@@ -129,29 +170,26 @@
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't have an account?"
-            android:layout_marginBottom="20dp"
+            android:text="Already have an account?"
             android:textColor="@color/app_text"
             android:textSize="13dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="75dp"
-            />
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:id="@+id/Sign_up_now"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:paddingLeft="5dp"
-            android:text="Sign up now!"
+            android:text="Sign in now!"
             android:textColor="#7065E4"
             android:textSize="18dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="215dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginBottom="20dp"/>
 
-            />
-
-        </RelativeLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>
