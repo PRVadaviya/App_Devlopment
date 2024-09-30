@@ -5,6 +5,7 @@ import static com.example.studentapplication.R.id.Sign_up_now;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button loginButton ;
     TextView Signup ;
     DBHandler dh;
+    SharedPreferences sp;
 
 
     @Override
@@ -32,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         Signup = (TextView) findViewById(Sign_up_now);
         Intent intent1 = new Intent(MainActivity.this,Sign_up.class);
         Intent intent2 = new Intent(MainActivity.this,Home_page.class);
+        sp = getSharedPreferences("login",MODE_PRIVATE);
+
+        if(sp.contains("email") && sp.contains("password")){
+            startActivity(intent2);
+        }
 
         Signup.setOnClickListener(new View.OnClickListener()
         {
@@ -50,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
             if(email.getText().toString().isEmpty() || password.getText().toString().isEmpty())
             {
-                Toast.makeText(getApplicationContext(),"Please",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Please enter all data",Toast.LENGTH_SHORT).show();
             }
             else
             {
@@ -61,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if(exist)
                 {
+                    SharedPreferences.Editor edit = sp.edit();
+                    edit.putString("email",email.getText().toString());
+                    edit.putString("password",password.getText().toString());
+                    edit.apply();
                     startActivity(intent2);
                 }
                 else

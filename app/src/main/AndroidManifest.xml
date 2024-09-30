@@ -13,6 +13,21 @@
         android:theme="@style/Theme.StudentApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Labtest"
+            android:exported="false" />
+        <activity
+            android:name=".Medicine_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Profile_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".BookDocterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DocterActivity"
+            android:exported="false" />
+        <activity
             android:name=".Home_page"
             android:exported="false" />
         <activity

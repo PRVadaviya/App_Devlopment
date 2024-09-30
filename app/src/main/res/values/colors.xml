@@ -11,4 +11,8 @@
     <color name="app_black">#FF000000</color>
     <color name="app_white">#FFFFFFFF</color>
     <color name="app_text">#95989E</color>
+    <color name="lavender">#8692f7</color>
+    <color name="login_lavender">#8692f7</color>
+    <color name="login_lavender2">#7065E4</color>
+    <color name="login_lavender3">#747F9E</color>
 </resources>
