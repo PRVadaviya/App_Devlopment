@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +36,7 @@ public class Home_page extends AppCompatActivity
         edit = (ImageView) findViewById(R.id.profile_edit);
         medi = (ImageView) findViewById(R.id.Medicine);
         lab = (ImageView) findViewById(R.id.lab);
+
 
         lab.setOnClickListener(new View.OnClickListener() {
             @Override

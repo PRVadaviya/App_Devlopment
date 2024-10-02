@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Please2344",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Please Enter Valid Info",Toast.LENGTH_SHORT).show();
                 }
 
             }

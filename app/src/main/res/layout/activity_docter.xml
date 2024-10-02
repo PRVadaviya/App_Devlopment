@@ -13,6 +13,7 @@
         android:padding="5dp">
 
         <ImageView
+            android:id="@+id/back"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_back"/>
@@ -249,7 +250,7 @@
                             android:id="@+id/doc_amo_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="$ 1200"
+                            android:text="Rs.1200"
                             android:textColor="@color/lavender"
                             android:textStyle="bold"
                             android:textSize="25dp" />
@@ -477,7 +478,7 @@
                             android:id="@+id/doc_amo_3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="$ 1200"
+                            android:text="Rs.1200"
                             android:textColor="@color/lavender"
                             android:textStyle="bold"
                             android:textSize="25dp" />
@@ -705,7 +706,7 @@
                             android:id="@+id/doc_amo_4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="$ 1200"
+                            android:text="Rs.1200"
                             android:textColor="@color/lavender"
                             android:textStyle="bold"
                             android:textSize="25dp" />
@@ -933,7 +934,7 @@
                             android:id="@+id/doc_amo_5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="$ 1200"
+                            android:text="Rs.1200"
                             android:textColor="@color/lavender"
                             android:textStyle="bold"
                             android:textSize="25dp" />

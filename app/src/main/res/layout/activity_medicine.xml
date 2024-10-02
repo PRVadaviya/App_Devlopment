@@ -7,7 +7,13 @@
 
 
     <LinearLayout android:id="@+id/docter_layout_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/login_lavender2" android:orientation="horizontal" android:padding="5dp">
-        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_back"/>
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"/>
+
         <TextView android:id="@+id/tv_medicine" android:layout_width="282dp" android:layout_height="51dp" android:layout_marginRight="3sp" android:gravity="center" android:layout_marginLeft="18dp" android:text="Medicine" android:textAlignment="center" android:textColor="@color/black" android:textSize="25dp" android:textStyle="bold"/>
     </LinearLayout>
     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/docter_layout_1">
@@ -18,7 +24,17 @@
                     <TextView android:id="@+id/med_name_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="Uprise-D3 1000lU Capsule" android:textColor="@color/black" android:textSize="19dp" android:textStyle="bold"/>
                     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="10dp" android:text="Pain relief,Treatment of Fever" android:textSize="15dp"/>
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                        <TextView android:id="@+id/med_amo_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
+
+                        <TextView
+                            android:id="@+id/med_amo_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Rs.400"
+                            android:textColor="@color/login_lavender2"
+                            android:textSize="25dp"/>
+
                         <Button android:id="@+id/addnow_1" android:layout_width="150dp" android:layout_height="40dp" android:layout_marginLeft="80dp" android:text="Add Now"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -30,7 +46,7 @@
                         <TextView android:id="@+id/med_name_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="Dolo 650 Tablet" android:textColor="@color/black" android:textSize="19dp" android:textStyle="bold"/>
                         <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="10dp" android:text="Nausea,Vomiting" android:textSize="15dp"/>
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                            <TextView android:id="@+id/med_amo_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
+                            <TextView android:id="@+id/med_amo_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="Rs.400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
                             <Button android:id="@+id/addnow_2" android:layout_width="150dp" android:layout_height="40dp" android:layout_marginLeft="80dp" android:text="Add Now"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -43,7 +59,7 @@
                         <TextView android:id="@+id/med_name_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="Tata 1mg Calcium + Vitamin D3" android:textColor="@color/black" android:textSize="19dp" android:textStyle="bold"/>
                         <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="10dp" android:text="anemia,blood disorders" android:textSize="15dp"/>
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                            <TextView android:id="@+id/med_amo_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
+                            <TextView android:id="@+id/med_amo_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="Rs.400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
                             <Button android:id="@+id/addnow_3" android:layout_width="150dp" android:layout_height="40dp" android:layout_marginLeft="80dp" android:text="Add Now"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -56,7 +72,7 @@
                         <TextView android:id="@+id/med_name_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="Vitamin B Complex Capsules" android:textColor="@color/black" android:textSize="19dp" android:textStyle="bold"/>
                         <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="10dp" android:text="Nausea,Vomiting" android:textSize="15dp"/>
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                            <TextView android:id="@+id/med_amo_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
+                            <TextView android:id="@+id/med_amo_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="Rs.400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
                             <Button android:id="@+id/addnow_4" android:layout_width="150dp" android:layout_height="40dp" android:layout_marginLeft="80dp" android:text="Add Now"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -69,7 +85,7 @@
                         <TextView android:id="@+id/med_name_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="HealthVit Chromium Picolinate" android:textColor="@color/black" android:textSize="19dp" android:textStyle="bold"/>
                         <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="10dp" android:text="Adhesive bandage,Crepe Bandage" android:textSize="15dp"/>
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                            <TextView android:id="@+id/med_amo_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
+                            <TextView android:id="@+id/med_amo_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="Rs.400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
                             <Button android:id="@+id/addnow_5" android:layout_width="150dp" android:layout_height="40dp" android:layout_marginLeft="80dp" android:text="Add Now"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -82,7 +98,7 @@
                         <TextView android:id="@+id/med_name_6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="Vitamin D Complex Capsules" android:textColor="@color/black" android:textSize="19dp" android:textStyle="bold"/>
                         <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="10dp" android:text="Pain relief,Treatment of Fever" android:textSize="15dp"/>
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                            <TextView android:id="@+id/med_amo_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
+                            <TextView android:id="@+id/med_amo_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:text="Rs.400" android:textColor="@color/login_lavender2" android:textSize="25dp"/>
                             <Button android:id="@+id/addnow_6" android:layout_width="150dp" android:layout_height="40dp" android:layout_marginLeft="80dp" android:text="Add Now"/>
                         </LinearLayout>
                     </LinearLayout>

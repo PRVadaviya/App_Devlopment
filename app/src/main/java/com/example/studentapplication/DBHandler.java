@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -26,9 +27,11 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE "+TABLE_INFO+"( "+KEY_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+KEY_NAME+
-                " TEXT NOT NULL, " +KEY_EMAIL+" TEXT NOT NULL, "+KEY_PHONE_NO+" TEXT NOT NULL, "+KEY_PASSWORD+" TEXT NOT NULL)");
+//        db.execSQL("CREATE TABLE "+TABLE_INFO+"( "+KEY_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+KEY_NAME+
+//                " TEXT NOT NULL, " +KEY_EMAIL+" TEXT NOT NULL, "+KEY_PHONE_NO+" TEXT NOT NULL, "+KEY_PASSWORD+" TEXT NOT NULL)");
 
+        db.execSQL("CREATE TABLE "+TABLE_INFO+"( "+KEY_NAME+
+                " TEXT NOT NULL, " +KEY_EMAIL+" TEXT PRIMARY KEY, "+KEY_PHONE_NO+" TEXT NOT NULL, "+KEY_PASSWORD+" TEXT NOT NULL)");
 
     }
 
@@ -65,11 +68,10 @@ public class DBHandler extends SQLiteOpenHelper {
 
         while(cursor.moveToNext()){
             MyDataType mdt = new MyDataType();
-            mdt.id = cursor.getInt(0);
-            mdt.name = cursor.getString(1);
-            mdt.email = cursor.getString(2);
-            mdt.phone = cursor.getString(3);
-            mdt.password = cursor.getString(4);
+            mdt.name = cursor.getString(0);
+            mdt.email = cursor.getString(1);
+            mdt.phone = cursor.getString(2);
+            mdt.password = cursor.getString(3);
             list.add(mdt);
         }
         cursor.close();
@@ -97,5 +99,29 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL("DELETE FROM "+TABLE_INFO);
         db.close();
 }
+
+
+    public MyDataType getData(String email){
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "select * from "+TABLE_INFO+" where "+KEY_EMAIL+" = ?";
+        Cursor cursor = db.rawQuery(query,new String[]{email});
+        MyDataType data = new MyDataType();
+        if(cursor.getCount() == 0){
+            Log.d("database","cursor is empty");
+        }
+
+        while(cursor.moveToNext()){
+            MyDataType mdt = new MyDataType();
+            data.name = cursor.getString(cursor.getColumnIndexOrThrow(KEY_NAME));
+            Log.d("database","cursor is "+data.name);
+            data.email = cursor.getString(cursor.getColumnIndexOrThrow(KEY_EMAIL));
+            Log.d("database","cursor is "+data.email);
+            data.phone = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PHONE_NO));
+            Log.d("database","cursor is "+data.phone);
+            data.password = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PASSWORD));
+            Log.d("database","cursor is "+data.password);
+        }
+        return data;
+    }
 
 }

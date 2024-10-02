@@ -62,9 +62,8 @@
             android:maxLines="1"
             android:paddingLeft="15dp"
             android:singleLine="true"
-            android:text="Username"
             android:textColor="#262C3D"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/profile_email"
@@ -76,7 +75,6 @@
             android:maxLines="1"
             android:paddingLeft="15dp"
             android:singleLine="true"
-            android:text="Email"
             android:textColor="#262C3D"
             android:textSize="14sp" />
 
@@ -87,7 +85,6 @@
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
             android:paddingLeft="15dp"
-            android:text="Contact No"
             android:textColor="#262C3D"
             android:textSize="14dp" />
 
